@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import Link from 'next/link'
+import { useState, useEffect } from "react";
+import Link from 'next/link';
 
 function LinkItem({ title, link, iconSvgPath, iconImgUrl }) {
   return (
@@ -18,7 +18,7 @@ function LinkItem({ title, link, iconSvgPath, iconImgUrl }) {
         {title}
       </span>
     </div>
-  )
+  );
 }
 
 function mainmenuModal({ show = false, setMainMenuModalOpen }) {
@@ -40,7 +40,7 @@ function mainmenuModal({ show = false, setMainMenuModalOpen }) {
       link: '/',
       iconSvgPath: "M17.5 2c-1.2 0-2.3.4-3.2 1H5.7c-.9 0-1.7.6-1.9 1.4L2 9.7v.3c0 1 .4 1.9 1 2.6V19c0 1.2.8 2 2 2h14c1.2 0 2-.8 2-2v-6.4c.5-.5.8-1.2.9-1.9.7-.9 1.1-2 1.1-3.3C23 4.5 20.5 2 17.5 2zM4 10.1L5.7 5h6.9c-.4.7-.6 1.6-.6 2.5 0 1.5.6 2.8 1.5 3.8-.4.4-.9.7-1.5.7-.9 0-2-.3-2-2 0-.6-.4-1-1-1s-1 .4-1 1c0 1.1-.9 2-2 2s-1.9-.8-2-1.9zM19 19h-4v-2c0-1.2-.8-2-2-2h-2c-1.2 0-2 .8-2 2v2H5v-5.1c.3 0 .6.1 1 .1 1.2 0 2.2-.5 2.9-1.3.7.8 1.8 1.3 3.1 1.3 1.2 0 2.3-.5 3-1.3.7.8 1.8 1.3 3 1.3.4 0 .7-.1 1-.1V19zm1.2-11.1c-.7 1.2-2.1 2.2-2.6 2.5-.1.1-.2.1-.3 0-.5-.3-1.9-1.2-2.6-2.5-.5-1-.3-1.8 0-2.1.3-.5.7-.8 1.3-.8.7 0 1.2.3 1.5 1 .2-.7.9-1 1.5-1 .5 0 .9.3 1.2.7.2.4.5 1.2 0 2.2z"
     }
-  ]
+  ];
 
   const categoryMenu = [
     {
@@ -69,7 +69,7 @@ function mainmenuModal({ show = false, setMainMenuModalOpen }) {
       iconSvgPath: '',
       iconImgUrl: 'https://images.tokopedia.net/img/cache/100-square/MIPuRC/2021/4/6/a40efe16-a224-4938-82bf-291cbf64e2b8.png'
     }
-  ]
+  ];
 
   const helpCenterMenu = [
     {
@@ -83,20 +83,20 @@ function mainmenuModal({ show = false, setMainMenuModalOpen }) {
       iconSvgPath: 'M22 10v-.57A2.52 2.52 0 0019.38 7a1.56 1.56 0 00-.44.08A8 8 0 005 7.08 1.56 1.56 0 004.58 7 2.52 2.52 0 002 9.43v2.14A2.52 2.52 0 004.57 14a8 8 0 0014.82 0 2.69 2.69 0 001.14-.26 9.05 9.05 0 01-3.19 4.49 7.318 7.318 0 01-1.76 1.05A1 1 0 0016 21.2a1.09 1.09 0 00.39-.08 9 9 0 002.21-1.32A11.08 11.08 0 0023 11a1 1 0 00-1-1zm-10 7a6 6 0 110-12 6 6 0 010 12zm-1 3a1 1 0 000 2h2a1 1 0 000-2h-2zm3.293-8.707A1 1 0 0116 12a4 4 0 11-8 0 1 1 0 112 0 2 2 0 004 0 1 1 0 01.293-.707z',
       iconImgUrl: ''
     },
-  ]
+  ];
 
   useEffect(() => {
     if (show) {
-      document.body.classList.add('overflow-hidden')
+      document.body.classList.add('overflow-hidden');
     } else {
-      document.body.classList.remove('overflow-hidden')
+      document.body.classList.remove('overflow-hidden');
     }
-  })
+  });
 
   return (
     <>
       <div className={`fixed w ${show ? 'h-full' : 'h-0'} z-20 bg-black opacity-50 delay-300`} />
-      <div className={`fixed bottom-0 w-full z-50 bg-white overflow-y-auto transition-all ease-out duration-500 ${show ? 'h-full' : 'h-0'}`}>
+      <div className={`absolute bottom-0 w-full z-50 bg-white overflow-y-auto transition-all ease-out duration-500 ${show ? 'top-0' : 'top-full'}`}>
         <header className="flex bg-white items-center sticky top-0 border-b">
           <button className="p-4" onClick={() => setMainMenuModalOpen(false)}>
             <img src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/atreus/kratos/03833eed.svg" alt="" />
@@ -145,7 +145,7 @@ function mainmenuModal({ show = false, setMainMenuModalOpen }) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default mainmenuModal
+export default mainmenuModal;
