@@ -1,12 +1,13 @@
-import ProductCard from "../products/ProductCard"
-import ProductCardMore from "../products/ProductCardMore"
-import ProductCardEmpty from "../products/ProductCardEmpty"
-import Link from "next/link"
+import ProductCard from "../products/ProductCard";
+import ProductCardMore from "../products/ProductCardMore";
+import ProductCardEmpty from "../products/ProductCardEmpty";
+import Link from "next/link";
+import ScrollContainer from "react-indiana-drag-scroll";
 
 function parsingColorCss(backgroundColors) {
   if (backgroundColors.length == 1) return backgroundColors;
 
-  return `linear-gradient(${backgroundColors.join(', ')})`
+  return `linear-gradient(${backgroundColors.join(', ')})`;
 }
 
 function productsSliderWithBackground({ title, link, data, backgroundImage, backgroundColors }) {
@@ -26,19 +27,21 @@ function productsSliderWithBackground({ title, link, data, backgroundImage, back
           <img className='h-full' style={{ maxWidth: '140px', minWidth: '140px' }} src={backgroundImage} alt="" />
         </div>
         <div className="overflow-x-auto relative disable-scrollbars">
-          <div className="relative flex h-full px-4 mr-4 py-2">
-            <ProductCardEmpty />
-            {data.map((product, i) =>
-              <div key={i} className="item mr-2">
-                <ProductCard {...product} />
-              </div>
-            )}
-            <ProductCardMore link="/" />
-          </div>
+          <ScrollContainer vertical={false}>
+            <div className="relative flex h-full px-4 mr-4 py-2">
+              <ProductCardEmpty />
+              {data.map((product, i) =>
+                <div key={i} className="item mr-2">
+                  <ProductCard {...product} />
+                </div>
+              )}
+              <ProductCardMore link="/" />
+            </div>
+          </ScrollContainer>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default productsSliderWithBackground
+export default productsSliderWithBackground;
