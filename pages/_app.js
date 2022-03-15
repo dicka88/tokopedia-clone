@@ -20,7 +20,7 @@ axios.interceptors.request.use(
 function myApp({ Component, pageProps }) {
   return (
     <div className="bg-gray-100 w-100">
-      <div id="app" className="bg-white mx-auto pb-16x">
+      <div id="app" className="relative bg-white mx-auto pb-16x min-h-screen">
         <Component {...pageProps} />
       </div>
     </div>
