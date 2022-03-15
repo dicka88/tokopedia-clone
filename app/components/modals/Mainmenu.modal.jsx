@@ -96,7 +96,7 @@ function mainmenuModal({ show = false, setMainMenuModalOpen }) {
   return (
     <>
       <div className={`fixed w ${show ? 'h-full' : 'h-0'} z-20 bg-black opacity-50 delay-300`} />
-      <div className={`absolute bottom-0 w-full z-50 bg-white overflow-y-auto transition-all ease-out duration-500 ${show ? 'top-0' : 'top-full'}`}>
+      <div className={`absolute bottom-0 w-full z-50 bg-white overflow-y-auto transition-all ease-in-out duration-500 ${show ? 'top-0' : 'top-full'}`}>
         <header className="flex bg-white items-center sticky top-0 border-b">
           <button className="p-4" onClick={() => setMainMenuModalOpen(false)}>
             <img src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/atreus/kratos/03833eed.svg" alt="" />
