@@ -1,17 +1,17 @@
 import axios from "axios"
 
-const login = ({ user, password }) => {
+export const login = ({ user, password }) => {
 
 }
 
-const register = ({ a }) => {
+export const register = ({ a }) => {
 
 }
 
-const logout = () => {
+export const logout = () => {
 
 }
 
-const refresh = (token) => {
+export const refresh = (token) => {
 
 }
