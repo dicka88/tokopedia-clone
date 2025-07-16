@@ -17,7 +17,7 @@ function Register() {
               <span className="font-bold">Daftar</span>
             </div>
             <div className="p-4">
-              <Link href="/register">
+              <Link href="/login">
                 <a className="text-green-500">Masuk</a>
               </Link>
             </div>
