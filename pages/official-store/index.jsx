@@ -10,9 +10,8 @@ function OfficialStore() {
       <TopbarMain />
       <main>
         <div style={{ height: '52px' }}></div>
-        <div className="flex">
-          <div className="border-b-2">a</div>
-          <div className="border-b-2">ad</div>
+        <div className="flex h-full items-center justify-center pt-80">
+          <p>Coming soon</p>
         </div>
       </main>
       <BottomNavbar />
